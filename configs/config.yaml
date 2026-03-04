@@ -1,18 +1,18 @@
 # configs/config.yaml
 paths:
-  input_dir: "./data/raw"
-  output_dir: "./data/processed"
+  input_dir: "../FYP - explo solutions/dataset/HCP_T2_Only"
+  output_dir: "../FYP - explo solutions/data/processed"
   template_path: "./data/templates/mni152_template.nii.gz"
   template_mask_path: "./data/templates/mni152_mask.nii.gz"
   intermediate_dir: "./data/processed/intermediate"
 
 pipeline_options:
-  save_intermediates: true
+  save_intermediates: false
 
 preprocessing:
   brain_extraction:
     enabled: true
-    device: "cpu"  # Options: cuda, cpu, mps
+    device: "cuda"  # Options: cuda, cpu, mps
     disable_tta: true  # Disable test-time augmentation for faster processing
     keep_mask: true  # Keep brain mask file for inspection
   
