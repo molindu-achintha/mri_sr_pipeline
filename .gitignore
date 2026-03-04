@@ -1,8 +1,3 @@
-# Data
-
-*.nii
-*.nii.gz
-
 # Logs
 *.log
 
